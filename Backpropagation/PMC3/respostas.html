@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Respostas PMC3</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 20px; font-size: 14px; }
+        th, td { border: 1px solid #ddd; padding: 6px; text-align: center; }
+        th { background-color: #f2f2f2; }
+        h1, h2 { color: #333; }
+        .question { font-weight: bold; margin-top: 30px; }
+        .answer { margin-bottom: 20px; text-align: justify; }
+    </style>
+</head>
+<body>
+    <h1>Trabalho - Perceptron Multicamadas (Backpropagation) - PMC3</h1>
+    
+    <div class="question">2. Registre os resultados finais desses 3 treinamentos para cada uma das três topologias de rede na tabela a seguir:</div>
+    <table>
+        <tr>
+            <th>Treinamento</th>
+            <th colspan="2">Rede 1</th>
+            <th colspan="2">Rede 2</th>
+            <th colspan="2">Rede 3</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th>EQM</th>
+            <th>Épocas</th>
+            <th>EQM</th>
+            <th>Épocas</th>
+            <th>EQM</th>
+            <th>Épocas</th>
+        </tr>
+<tr><td>1º (T1)</td><td>0.000927</td><td>2493</td><td>0.000543</td><td>1494</td><td>0.494518</td><td>2</td></tr><tr><td>2º (T2)</td><td>0.001550</td><td>1535</td><td>0.000873</td><td>1153</td><td>0.494512</td><td>2</td></tr><tr><td>3º (T3)</td><td>0.001139</td><td>2186</td><td>0.000741</td><td>1423</td><td>0.494514</td><td>2</td></tr></table>
+    <div class="question">3. Faça a validação da rede em relação aos valores desejados apresentados na tabela abaixo.</div>
+    <table>
+        <tr>
+            <th></th>
+            <th></th>
+            <th colspan="3">Rede 1</th>
+            <th colspan="3">Rede 2</th>
+            <th colspan="3">Rede 3</th>
+        </tr>
+        <tr>
+            <th>Amostra</th>
+            <th>f(t)</th>
+            <th>(T1)</th><th>(T2)</th><th>(T3)</th>
+            <th>(T1)</th><th>(T2)</th><th>(T3)</th>
+            <th>(T1)</th><th>(T2)</th><th>(T3)</th>
+        </tr>
+<tr><td>t = 101</td><td>0.4173</td><td>0.4634</td><td>0.4617</td><td>0.4593</td><td>0.4233</td><td>0.4228</td><td>0.4290</td><td>1.0000</td><td>1.0000</td><td>1.0000</td></tr><tr><td>t = 102</td><td>0.0062</td><td>0.0141</td><td>0.0191</td><td>0.0105</td><td>0.0041</td><td>0.0064</td><td>0.0062</td><td>1.0000</td><td>1.0000</td><td>1.0000</td></tr><tr><td>t = 103</td><td>0.3387</td><td>0.3803</td><td>0.3759</td><td>0.3887</td><td>0.3575</td><td>0.3834</td><td>0.3658</td><td>1.0000</td><td>1.0000</td><td>1.0000</td></tr><tr><td>t = 104</td><td>0.1886</td><td>0.2384</td><td>0.2611</td><td>0.2477</td><td>0.1525</td><td>0.1491</td><td>0.1548</td><td>1.0000</td><td>1.0000</td><td>1.0000</td></tr><tr><td>t = 105</td><td>0.7418</td><td>0.7359</td><td>0.7067</td><td>0.7426</td><td>0.7237</td><td>0.7381</td><td>0.7299</td><td>1.0000</td><td>1.0000</td><td>1.0000</td></tr><tr><td>t = 106</td><td>0.3138</td><td>0.2489</td><td>0.2120</td><td>0.2384</td><td>0.2883</td><td>0.2586</td><td>0.2626</td><td>1.0000</td><td>1.0000</td><td>1.0000</td></tr><tr><td>t = 107</td><td>0.4466</td><td>0.4260</td><td>0.4144</td><td>0.4327</td><td>0.4362</td><td>0.4423</td><td>0.4448</td><td>1.0000</td><td>1.0000</td><td>1.0000</td></tr><tr><td>t = 108</td><td>0.0835</td><td>0.0759</td><td>0.0780</td><td>0.0891</td><td>0.0879</td><td>0.0795</td><td>0.0762</td><td>1.0000</td><td>1.0000</td><td>1.0000</td></tr><tr><td>t = 109</td><td>0.1930</td><td>0.1847</td><td>0.2142</td><td>0.1716</td><td>0.2239</td><td>0.2228</td><td>0.2168</td><td>1.0000</td><td>1.0000</td><td>1.0000</td></tr><tr><td>t = 110</td><td>0.3807</td><td>0.3323</td><td>0.3072</td><td>0.3236</td><td>0.4328</td><td>0.4688</td><td>0.4318</td><td>1.0000</td><td>1.0000</td><td>1.0000</td></tr><tr><td>t = 111</td><td>0.5438</td><td>0.5602</td><td>0.5599</td><td>0.5554</td><td>0.5540</td><td>0.5499</td><td>0.5561</td><td>1.0000</td><td>1.0000</td><td>1.0000</td></tr><tr><td>t = 112</td><td>0.5897</td><td>0.6159</td><td>0.6204</td><td>0.6206</td><td>0.5900</td><td>0.6144</td><td>0.6200</td><td>1.0000</td><td>1.0000</td><td>1.0000</td></tr><tr><td>t = 113</td><td>0.3536</td><td>0.3563</td><td>0.3752</td><td>0.3597</td><td>0.3484</td><td>0.3425</td><td>0.3372</td><td>1.0000</td><td>1.0000</td><td>1.0000</td></tr><tr><td>t = 114</td><td>0.2210</td><td>0.2052</td><td>0.2103</td><td>0.1927</td><td>0.2197</td><td>0.2408</td><td>0.2409</td><td>1.0000</td><td>1.0000</td><td>1.0000</td></tr><tr><td>t = 115</td><td>0.0631</td><td>0.0924</td><td>0.1137</td><td>0.1042</td><td>0.0456</td><td>0.0430</td><td>0.0490</td><td>1.0000</td><td>1.0000</td><td>1.0000</td></tr><tr><td>t = 116</td><td>0.4499</td><td>0.4667</td><td>0.4436</td><td>0.4580</td><td>0.4349</td><td>0.4159</td><td>0.4235</td><td>1.0000</td><td>1.0000</td><td>1.0000</td></tr><tr><td>t = 117</td><td>0.2564</td><td>0.2248</td><td>0.2337</td><td>0.2293</td><td>0.2355</td><td>0.2449</td><td>0.2417</td><td>1.0000</td><td>1.0000</td><td>1.0000</td></tr><tr><td>t = 118</td><td>0.7642</td><td>0.7323</td><td>0.7680</td><td>0.7321</td><td>0.7729</td><td>0.7569</td><td>0.7630</td><td>1.0000</td><td>1.0000</td><td>1.0000</td></tr><tr><td>t = 119</td><td>0.1411</td><td>0.1554</td><td>0.1454</td><td>0.1563</td><td>0.1397</td><td>0.1527</td><td>0.1434</td><td>1.0000</td><td>1.0000</td><td>1.0000</td></tr><tr><td>t = 120</td><td>0.3626</td><td>0.3748</td><td>0.3284</td><td>0.3780</td><td>0.3559</td><td>0.3512</td><td>0.3428</td><td>1.0000</td><td>1.0000</td><td>1.0000</td></tr><tr><td><b>Erro Relativo Médio:</b></td><td></td><td><b>16.28%</b></td><td><b>23.61%</b></td><td><b>15.22%</b></td><td><b>7.74%</b></td><td><b>8.76%</b></td><td><b>7.22%</b></td><td><b>1112.56%</b></td><td><b>1112.55%</b></td><td><b>1112.55%</b></td></tr><tr><td><b>Variância:</b></td><td></td><td><b>766.71%</b></td><td><b>2116.54%</b></td><td><b>359.05%</b></td><td><b>87.05%</b></td><td><b>73.83%</b></td><td><b>38.07%</b></td><td><b>11838140.99%</b></td><td><b>11838043.49%</b></td><td><b>11838078.89%</b></td></tr></table>
+    <div class="question">4. Trace o gráfico dos valores de erro quadrático médio (EQM) em função de cada época de treinamento para o melhor de cada rede.</div>
+    <div class="answer">
+        <p>Abaixo estão os gráficos do EQM para a melhor execução (menor Erro Relativo no Teste) de cada uma das três topologias:</p>
+        <img src="graficos_eqm.png" alt="Gráficos de EQM" width="1000">
+    </div>
+
+    <div class="question">5. Trace o gráfico dos valores desejados e dos valores estimados pela respectiva rede em função do domínio de estimação.</div>
+    <div class="answer">
+        <p>Abaixo estão os gráficos comparando o valor desejado f(t) e o valor estimado y(t) para o conjunto de testes (t=101..120) para o melhor treinamento de cada topologia:</p>
+        <img src="graficos_estimados.png" alt="Gráficos Valores Estimados" width="1000">
+    </div>
+
+    <div class="question">6. Indique qual das topologias candidatas e configuração final seria a mais adequada para previsão.</div>
+    <div class="answer">
+Baseado nas análises das tabelas e gráficos, a topologia mais adequada é a <b>Rede 2</b> utilizando a configuração de treinamento <b>T3</b>. Esta combinação apresentou o menor Erro Relativo Médio (7.22%) sobre o conjunto de dados de teste (dados não vistos durante o treinamento), demonstrando a melhor capacidade de generalização e aderência aos dados temporais futuros (t=101 a 120).
+    </div>
+
+    <div class="question">7. Investigue e comente sobre as principais características e vantagens dos seguintes algoritmos de treinamento:</div>
+    <div class="answer">
+        <b>a. Algoritmo de treinamento Resilient-Propagation (RProp)</b><br>
+        O RProp (Resilient Backpropagation) é um algoritmo de aprendizado heurístico cuja principal característica é utilizar apenas o <b>sinal</b> (direção) do gradiente de erro para atualizar os pesos, ignorando a magnitude (valor absoluto) do gradiente. Para cada peso, ele mantém um fator de atualização individual. Se o gradiente mantiver o mesmo sinal por duas épocas seguidas, o tamanho do passo aumenta (aceleração); se o sinal inverter (indicando que o mínimo foi ultrapassado), o tamanho do passo diminui. <br>
+        <i>Vantagens:</i> É extremamente rápido e robusto. Resolve problemas clássicos do gradiente descendente convencional, como a estagnação em regiões de platô (onde o gradiente é muito pequeno), permitindo uma convergência muito mais rápida. Não requer ajuste manual criterioso da taxa de aprendizagem para cada problema.
+        <br><br>
+        <b>b. Algoritmo de treinamento Levenberg-Marquardt (LM)</b><br>
+        O algoritmo de Levenberg-Marquardt é uma técnica de otimização numérica que combina a velocidade do método de Newton (ou Gauss-Newton) com a estabilidade do método do Gradiente Descendente. Ele utiliza a matriz Jacobiana (derivadas dos erros em relação aos pesos) para aproximar a matriz Hessiana. Quando o algoritmo está longe do mínimo, ele se comporta como o gradiente descendente (passos pequenos e seguros); quando se aproxima do mínimo, ele transiciona para o método de Gauss-Newton, garantindo uma convergência quadrática e extremamente rápida.<br>
+        <i>Vantagens:</i> É considerado um dos algoritmos de treinamento mais rápidos disponíveis para redes neurais de tamanho moderado. Apresenta excelente taxa de convergência e costuma encontrar erros muito menores que o backpropagation padrão em consideravelmente menos épocas. A principal desvantagem é o alto custo computacional por época e o grande consumo de memória, pois exige o cálculo e armazenamento da matriz Jacobiana, tornando-o inadequado para redes gigantescas.
+    </div>
+</body>
+</html>

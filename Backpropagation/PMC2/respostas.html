@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Respostas PMC2</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 20px; font-size: 14px; }
+        th, td { border: 1px solid #ddd; padding: 6px; text-align: center; }
+        th { background-color: #f2f2f2; }
+        h1, h2 { color: #333; }
+        .question { font-weight: bold; margin-top: 30px; }
+        .answer { margin-bottom: 20px; text-align: justify; }
+    </style>
+</head>
+<body>
+    <h1>Trabalho - Perceptron Multicamadas (Backpropagation) - PMC2</h1>
+    
+    <div class="question">1. e 2. Execute os treinamentos (Padrão e com Momentum) e trace os gráficos</div>
+    <div class="answer">
+        <p>Abaixo seguem os resultados das duas execuções solicitadas (padrão e com momentum):</p>
+        <ul>
+            <li><b>Backpropagation Padrão (η=0.1, sem momentum):</b> 1033 épocas, Tempo: 4.58 segundos.</li>
+            <li><b>Backpropagation com Momentum (η=0.1, α=0.9):</b> 61 épocas, Tempo: 0.28 segundos.</li>
+        </ul>
+        <p>Os gráficos do Erro Quadrático Médio em função das épocas para ambos os treinamentos estão na imagem abaixo (grafico_eqm.png):</p>
+        <img src="grafico_eqm.png" alt="Gráficos de EQM" width="800">
+    </div>
+    
+    <div class="question">3. e 4. Faça a validação da rede aplicando o conjunto de teste fornecido... Forneça a taxa de acerto (%).</div>
+    <div class="answer">
+        A tabela a seguir mostra os resultados da rede treinada com <b>Backpropagation Padrão</b> (já que o objetivo principal é classificação, e ambos os treinamentos usam os mesmos dados, utilizaremos o modelo padrão aqui como exemplo representativo para a tabela. A taxa de acerto do modelo com momentum também foi calculada e é de 100.00%).
+    </div>
+    
+    <table>
+        <tr>
+            <th>Amostra</th>
+            <th>x1</th>
+            <th>x2</th>
+            <th>x3</th>
+            <th>x4</th>
+            <th>d1</th>
+            <th>d2</th>
+            <th>d3</th>
+            <th>y1</th>
+            <th>y2</th>
+            <th>y3</th>
+            <th>y1 (arred.)</th>
+            <th>y2 (arred.)</th>
+            <th>y3 (arred.)</th>
+        </tr>
+<tr><td>1</td><td>0.8622</td><td>0.7101</td><td>0.6236</td><td>0.7894</td><td>0</td><td>0</td><td>1</td><td>0.0000</td><td>0.0059</td><td>0.9950</td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td></tr><tr><td>2</td><td>0.2741</td><td>0.1552</td><td>0.1333</td><td>0.1516</td><td>1</td><td>0</td><td>0</td><td>0.9985</td><td>0.0056</td><td>0.0000</td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td></tr><tr><td>3</td><td>0.6772</td><td>0.8516</td><td>0.6543</td><td>0.7573</td><td>0</td><td>0</td><td>1</td><td>0.0000</td><td>0.0055</td><td>0.9957</td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td></tr><tr><td>4</td><td>0.2178</td><td>0.5039</td><td>0.6415</td><td>0.5039</td><td>0</td><td>1</td><td>0</td><td>0.0043</td><td>0.9822</td><td>0.0016</td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td></tr><tr><td>5</td><td>0.7260</td><td>0.7500</td><td>0.7007</td><td>0.4953</td><td>0</td><td>0</td><td>1</td><td>0.0000</td><td>0.0887</td><td>0.9239</td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td></tr><tr><td>6</td><td>0.2473</td><td>0.2941</td><td>0.4248</td><td>0.3087</td><td>1</td><td>0</td><td>0</td><td>0.9427</td><td>0.0587</td><td>0.0000</td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td></tr><tr><td>7</td><td>0.5682</td><td>0.5683</td><td>0.5054</td><td>0.4426</td><td>0</td><td>1</td><td>0</td><td>0.0016</td><td>0.9834</td><td>0.0040</td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td></tr><tr><td>8</td><td>0.6566</td><td>0.6715</td><td>0.4952</td><td>0.3951</td><td>0</td><td>1</td><td>0</td><td>0.0006</td><td>0.9747</td><td>0.0134</td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td></tr><tr><td>9</td><td>0.0705</td><td>0.4717</td><td>0.2921</td><td>0.2954</td><td>1</td><td>0</td><td>0</td><td>0.9725</td><td>0.0320</td><td>0.0000</td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td></tr><tr><td>10</td><td>0.1187</td><td>0.2568</td><td>0.3140</td><td>0.3037</td><td>1</td><td>0</td><td>0</td><td>0.9927</td><td>0.0118</td><td>0.0000</td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td></tr><tr><td>11</td><td>0.5673</td><td>0.7011</td><td>0.4083</td><td>0.5552</td><td>0</td><td>1</td><td>0</td><td>0.0005</td><td>0.9713</td><td>0.0144</td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td></tr><tr><td>12</td><td>0.3164</td><td>0.2251</td><td>0.3526</td><td>0.2560</td><td>1</td><td>0</td><td>0</td><td>0.9860</td><td>0.0182</td><td>0.0000</td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td></tr><tr><td>13</td><td>0.7884</td><td>0.9568</td><td>0.6825</td><td>0.6398</td><td>0</td><td>0</td><td>1</td><td>0.0000</td><td>0.0027</td><td>0.9982</td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td></tr><tr><td>14</td><td>0.9633</td><td>0.7850</td><td>0.6777</td><td>0.6059</td><td>0</td><td>0</td><td>1</td><td>0.0000</td><td>0.0046</td><td>0.9966</td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td></tr><tr><td>15</td><td>0.7739</td><td>0.8505</td><td>0.7934</td><td>0.6626</td><td>0</td><td>0</td><td>1</td><td>0.0000</td><td>0.0021</td><td>0.9988</td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td></tr><tr><td>16</td><td>0.4219</td><td>0.4136</td><td>0.1408</td><td>0.0940</td><td>1</td><td>0</td><td>0</td><td>0.9927</td><td>0.0120</td><td>0.0000</td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td></tr><tr><td>17</td><td>0.6616</td><td>0.4365</td><td>0.6597</td><td>0.8129</td><td>0</td><td>0</td><td>1</td><td>0.0000</td><td>0.2391</td><td>0.7352</td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td></tr><tr><td>18</td><td>0.7325</td><td>0.4761</td><td>0.3888</td><td>0.5683</td><td>0</td><td>1</td><td>0</td><td>0.0018</td><td>0.9794</td><td>0.0036</td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td></tr>
+        <tr>
+            <td colspan="11" style="text-align: right;"><b>Taxa de Acerto (%):</b></td>
+            <td colspan="3"><b>100.00%</b></td>
+        </tr>
+    </table>
+    
+</body>
+</html>
